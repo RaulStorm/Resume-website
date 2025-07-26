@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raul Musaev - Backend Developer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" data-translate="hero_name">Раул Мусаев</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-translate="nav_home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-translate="nav_about">Обо мне</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-translate="nav_skills">Навыки</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-translate="nav_projects">Проекты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-translate="nav_contact">Контакты</a>
+                </li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru" data-translate="lang_ru">RU</button>
+                <button class="lang-btn" data-lang="en" data-translate="lang_en">EN</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span data-translate="hero_greeting">Привет! Я</span> <span class="highlight" data-translate="hero_name">Раул Мусаев</span>
+                </h1>
+                <h2 class="hero-subtitle" data-translate="hero_subtitle">Backend Developer</h2>
+                <p class="hero-description" data-translate="hero_description">
+                    Создаю чистый и надежный код, люблю автоматизацию и архитектурные вызовы
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-translate="hero_projects_btn">Мои проекты</a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="hero_contact_btn">Связаться</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="ProjectsGallery/profile-foto/profile-photo.jpg" alt="Raul Musaev" class="profile-image">
+                        <i class="fas fa-user-circle profile-icon"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3 data-translate="hero_remote_work">🏠 Работаю из дома</h3>
+                        <p data-translate="hero_location">Воронеж, Россия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="about_title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-translate="about_text">
+                        Я сертифицированный Java Developer (выпускник TOP Academy) с страстью к созданию качественного программного обеспечения. 
+                        Специализируюсь на backend разработке, но также имею опыт в Android разработке.
+                    </p>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i>
+                            <span data-translate="achievement_certified">Сертифицированный Java Developer</span>
+                        </div>
+                        <div class="achievement achievement-certified" onclick="showDiploma()">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span data-translate="achievement_graduated">Сертифицированный выпускник TOP Academy</span>
+                            <i class="fas fa-external-link-alt achievement-link"></i>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-code"></i>
+                            <span data-translate="achievement_optimization">Люблю оптимизацию и архитектуру</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-university"></i>
+                            <span data-translate="achievement_university">Студент ВГТУ, 3 курс, Информационные системы и технологии</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills_title">Навыки и технологии</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-translate="skills_backend">Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dot-circle"></i>
+                            <span>.NET</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-translate="skills_mobile">Mobile Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-palette"></i>
+                            <span>Jetpack Compose</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-translate="skills_databases">Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MS SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-translate="skills_frontend">Frontend & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects_title">Мои проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="showProjectModal()">
+                    <div class="project-header">
+                        <h3>Restaurant-website</h3>
+                        <span class="project-lang">Java</span>
+                    </div>
+                    <p class="project-description" data-translate="restaurant_description">
+                        Веб-сайт ресторана на Java
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/RaulStorm/Restaurant-website" target="_blank" class="project-link" onclick="event.stopPropagation()">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="project-hover-indicator">
+                        <i class="fas fa-eye"></i>
+                        <span data-translate="project_modal_view_details">Посмотреть детали</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Связаться со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" onclick="window.open('https://github.com/RaulStorm', '_blank')">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/RaulStorm" target="_blank">github.com/RaulStorm</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" onclick="window.open('https://vk.com/raul.musaev', '_blank')">
+                        <i class="fab fa-vk"></i>
+                        <div>
+                            <h3>VK</h3>
+                            <a href="https://vk.com/raul.musaev" target="_blank">vk.com/raul.musaev</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" onclick="window.open('https://t.me/rauul05', '_blank')">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h3 data-translate="contact_telegram">Telegram</h3>
+                            <a href="https://t.me/rauul05" target="_blank">@rauul05</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" onclick="window.open('mailto:raul.musayev.0505@mail.ru', '_blank')">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-translate="contact_email">Email</h3>
+                            <a href="mailto:raul.musayev.0505@mail.ru">raul.musayev.0505@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" onclick="window.open('tel:+79515678373', '_blank')">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-translate="contact_phone1">Phone 1</h3>
+                            <a href="tel:+79515678373">+7 (951) 567-83-73</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" onclick="window.open('tel:+79950378373', '_blank')">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-translate="contact_phone2">Phone 2</h3>
+                            <a href="tel:+79950378373">+7 (995) 037-83-73</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footer_copyright">&copy; 2025 Раул Мусаев. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Diploma Modal -->
+    <div id="diplomaModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-translate="diploma_title">Диплом TOP Academy</h3>
+                <span class="close" onclick="closeDiploma()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe src="TopAcademyDiplom.pdf" width="100%" height="500px"></iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="TopAcademyDiplom.pdf" target="_blank" class="btn btn-primary" data-translate="diploma_download">
+                    <i class="fas fa-download"></i> Скачать PDF
+                </a>
+                <button class="btn btn-secondary" onclick="closeDiploma()" data-translate="diploma_close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <h3 data-translate="project_modal_title">Restaurant-website</h3>
+                <span class="close" onclick="closeProjectModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="project-modal-grid">
+                    <div class="project-modal-section">
+                        <h4 data-translate="project_modal_description">Описание</h4>
+                        <p data-translate="project_modal_restaurant_description">
+                            Полнофункциональный веб-сайт ресторана, разработанный на Java с использованием современных технологий. Проект демонстрирует навыки backend разработки и создание пользовательского интерфейса.
+                        </p>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h4 data-translate="project_modal_tech">Технологии</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h4 data-translate="project_modal_features">Основные функции</h4>
+                        <ul class="features-list">
+                            <li data-translate="project_feature_menu">Система управления меню</li>
+                            <li data-translate="project_feature_orders">Онлайн заказы</li>
+                            <li data-translate="project_feature_admin">Административная панель</li>
+                            <li data-translate="project_feature_booking">Система бронирования</li>
+                            <li data-translate="project_feature_responsive">Адаптивный дизайн</li>
+                        </ul>
+                    </div>
+                    
+                                                   <div class="project-modal-section">
+                                   <h4 data-translate="project_modal_screenshots">Скриншоты</h4>
+                                   <div class="screenshots-gallery">
+                                       <img src="ProjectsGallery/Restautrant-website/1.jpg" alt="Скриншот 1 - Главная страница" class="screenshot">
+                                       <img src="ProjectsGallery/Restautrant-website/2.jpg" alt="Скриншот 2 - Меню" class="screenshot">
+                                       <img src="ProjectsGallery/Restautrant-website/3.jpg" alt="Скриншот 3 - Заказы" class="screenshot">
+                                       <img src="ProjectsGallery/Restautrant-website/4.jpg" alt="Скриншот 4 - Админ панель" class="screenshot">
+                                       <img src="ProjectsGallery/Restautrant-website/5.jpg" alt="Скриншот 5 - Бронирование" class="screenshot">
+                                       <img src="ProjectsGallery/Restautrant-website/6.jpg" alt="Скриншот 6 - Дополнительные функции" class="screenshot">
+                                   </div>
+                               </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/RaulStorm/Restaurant-website" target="_blank" class="btn btn-primary" data-translate="project_modal_view_github">
+                    <i class="fab fa-github"></i> Посмотреть на GitHub
+                </a>
+                <button class="btn btn-secondary" onclick="closeProjectModal()" data-translate="project_modal_close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
